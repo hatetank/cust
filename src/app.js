@@ -1,3 +1,15 @@
-const uuid = require('uuid');
+const express = require('express');
+const app = express();
+const PORT = 3000;
 
-console.log(uuid.v4());
+app.get('/', (req, res) => {
+    res.send('hellooooo bitches');
+});
+
+app.post('/', (req, res) =>{
+    res.send("POST request");
+});
+
+app.listen(PORT, () => {
+    console.log('App listening on port ' + PORT);
+});
